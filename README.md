@@ -11,25 +11,39 @@
 
 ---
 
-## 🏁 **Getting Started**
+---
 
-### **1️⃣ Clone the Repository**
+## ⚡ Features
 
-```bash
-git clone https://github.com/YourUsername/Visual-Quality-Check-Packaging-Line.git
-cd Visual-Quality-Check-Packaging-Line
-
+- 🔍 Real-time defect detection via webcam or image upload  
+- 🖥️ User-friendly interface using Streamlit  
+- ✅ Visual classification of packaging as Defective / Non-Defective  
+- 📊 Potential for model accuracy reports and analytics  
+- 🔄 Easy to retrain with new datasets for different packaging types  
 
 ---
 
-## **Other Recommendations**
-
-✅ Add a `.gitignore` for Python  
-✅ Include `requirements.txt` with relevant libraries  
-✅ Upload sample images in a `sample_images/` folder for demo  
-✅ Optionally, record a short GIF or screenshot of the UI for the README  
+## 🚀 Getting Started
 
 ---
 
-**Want me to generate requirements.txt, sample Python files, or dataset folder structure?** Let me know, I can provide those too.
+# **3️⃣ Additional Files Recommendations**
+
+✅ **`requirements.txt` Example:**
+
+```text
+tensorflow>=2.12
+opencv-python
+numpy
+pandas
+streamlit
+matplotlib
+scikit-learn
+
+![Python](https://img.shields.io/badge/Python-3.8+-blue)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
+![Streamlit](https://img.shields.io/badge/Streamlit-WebApp-green)
+![Status](https://img.shields.io/badge/Project-Active-brightgreen)
+
+
 
