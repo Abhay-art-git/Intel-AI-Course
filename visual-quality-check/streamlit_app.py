@@ -12,14 +12,12 @@ st.title("📦 Visual Quality Check System")
 
 st.markdown("Upload or capture an image of a package to check its quality.")
 
-# Choose input method
 input_type = st.radio("Choose Input Method:", ["📁 Upload Image", "📷 Use Webcam"])
-
 image = None
 
 if input_type == "📁 Upload Image":
     uploaded_file = st.file_uploader("Upload an image", type=["jpg", "jpeg", "png"])
-    if uploaded_file is not None:
+    if uploaded_file:
         image = Image.open(uploaded_file).convert("RGB")
 
 elif input_type == "📷 Use Webcam":
@@ -27,16 +25,13 @@ elif input_type == "📷 Use Webcam":
     if picture:
         image = Image.open(picture).convert("RGB")
 
-# Process if image is available
-if image is not None:
+if image:
     st.image(image, caption="Selected Image", use_column_width=True)
 
-    # Preprocess image
     img = image.resize((128, 128))
     img = np.array(img) / 255.0
     img = np.expand_dims(img, axis=0)
 
-    # Prediction
     prediction = model.predict(img)
     label = classes[np.argmax(prediction)]
     confidence = float(np.max(prediction)) * 100
